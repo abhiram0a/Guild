@@ -1,0 +1,559 @@
+.friend-workspace{
+
+    max-width:1100px;
+
+    margin:40px auto 70px;
+
+    padding:0 20px;
+
+}
+
+.friend-header{
+
+    background:linear-gradient(135deg,#ffffff,#f4f7ff);
+
+    border:1px solid #e7ecff;
+
+    border-radius:22px;
+
+    padding:26px 32px;
+
+    margin-bottom:34px;
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+.friend-info{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+.friend-avatar{
+
+    width:72px;
+
+    height:72px;
+
+    border-radius:50%;
+
+    background:linear-gradient(135deg,var(--primary),#7c6cff);
+
+    color:white;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:30px;
+
+    font-weight:700;
+
+    box-shadow:0 10px 25px rgba(79,70,229,.25);
+
+}
+
+.friend-info h1{
+
+    margin:0;
+
+    font-size:30px;
+
+    font-weight:700;
+
+    color:#111827;
+
+}
+
+.friend-info p{
+
+    margin-top:5px;
+
+    color:#6b7280;
+
+}
+
+.conversation-feed{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:40px;
+
+    position:relative;
+
+}
+
+
+.conversation-row{
+
+    display:flex;
+
+    width:100%;
+
+    position:relative;
+
+}
+
+.conversation-row.mine{
+
+    justify-content:flex-end;
+
+}
+
+.conversation-row.theirs{
+
+    justify-content:flex-start;
+
+}
+
+.conversation-bubble{
+
+    width:64%;
+
+    max-width:860px;
+
+    background:white;
+
+    border-radius:22px;
+
+    padding:24px;
+
+    box-shadow:var(--shadow-sm);
+
+    border:1px solid #edf0f6;
+
+    position:relative;
+
+    transition:.25s;
+
+}
+
+.conversation-bubble:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:var(--shadow);
+
+}
+
+.conversation-row.mine .conversation-bubble{
+
+    background:linear-gradient(180deg,#ffffff,#f8fbff);
+
+    border-left:none;
+
+    border-right:4px solid var(--primary);
+
+    border-top-right-radius:8px;
+
+}
+
+.conversation-row.theirs .conversation-bubble{
+
+    border-top-left-radius:8px;
+    background:#ffffff;
+
+    border-right:none;
+
+    border-left:4px solid var(--success);
+
+}
+
+.bubble-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:16px;
+
+}
+
+.bubble-top small{
+
+    color:#6b7280;
+
+    font-weight:600;
+
+}
+
+.project-link{
+
+    display:inline-block;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    color:#111827;
+
+    margin-bottom:18px;
+
+    transition:.2s;
+
+}
+
+.project-link:hover{
+
+    color:var(--primary);
+
+}
+
+.invite-meta{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+    margin-bottom:20px;
+
+}
+
+.invite-meta span{
+
+    display:block;
+
+    font-size:12px;
+
+    text-transform:uppercase;
+
+    letter-spacing:.5px;
+
+    color:#9ca3af;
+
+    margin-bottom:5px;
+
+}
+
+.invite-meta strong{
+
+    color:#111827;
+
+    font-size:16px;
+
+}
+
+.status-pill{
+
+    padding:7px 14px;
+
+    border-radius:50px;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    letter-spacing:.4px;
+
+}
+
+.status-pill.pending{
+
+    background:#fef3c7;
+
+    color:#92400e;
+
+}
+
+.status-pill.accepted{
+
+    background:#dcfce7;
+
+    color:#166534;
+
+}
+
+.status-pill.rejected{
+
+    background:#fee2e2;
+
+    color:#b91c1c;
+
+}
+
+.accept-panel{
+
+    margin-top:20px;
+
+    padding-top:22px;
+
+    border-top:1px solid #eef2f7;
+
+}
+
+.form-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:16px;
+
+}
+
+.accept-panel label{
+
+    display:block;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    color:#4b5563;
+
+    margin-bottom:8px;
+
+}
+
+.accept-panel textarea{
+
+    resize:none;
+
+}
+
+.invite-actions{
+
+    display:flex;
+
+    gap:12px;
+
+    margin-top:22px;
+
+}
+
+.accept-btn{
+
+    flex:1;
+
+    border:none;
+
+    background:var(--primary);
+
+    color:white;
+
+    padding:13px;
+
+    border-radius:12px;
+
+    font-weight:600;
+
+    transition:.25s;
+
+}
+
+.accept-btn:hover{
+
+    background:var(--primary-dark);
+
+    transform:translateY(-2px);
+
+}
+
+.reject-btn{
+
+    flex:1;
+
+    border:none;
+
+    background:#f3f4f6;
+
+    color:#374151;
+
+    padding:13px;
+
+    border-radius:12px;
+
+    font-weight:600;
+
+    transition:.25s;
+
+}
+
+.reject-btn:hover{
+
+    background:#fee2e2;
+
+    color:#dc2626;
+
+}
+
+.accepted-box{
+
+    margin-top:20px;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    border:1px solid #d1fae5;
+
+    background:#f8fffb;
+
+}
+
+.accepted-header{
+
+    background:#22c55e;
+
+    color:white;
+
+    font-weight:700;
+
+    padding:14px 18px;
+
+}
+
+.accepted-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+    padding:20px;
+
+}
+
+.accepted-grid span{
+
+    display:block;
+
+    color:#6b7280;
+
+    font-size:13px;
+
+    margin-bottom:6px;
+
+}
+
+.accepted-grid strong{
+
+    color:#111827;
+
+}
+
+.accepted-note{
+
+    padding:0 20px 20px;
+
+}
+
+.accepted-note span{
+
+    display:block;
+
+    font-size:13px;
+
+    color:#6b7280;
+
+    margin-bottom:8px;
+
+}
+
+.accepted-note p{
+
+    margin:0;
+
+    line-height:1.7;
+
+    color:#374151;
+
+}
+
+.no-gig-warning{
+
+    background:#fff8e6;
+
+    border:1px solid #fde68a;
+
+    color:#92400e;
+
+    padding:16px;
+
+    border-radius:14px;
+
+    font-weight:500;
+
+}
+
+.conversation-empty{
+
+    background:white;
+
+    border-radius:24px;
+
+    padding:80px 40px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow-sm);
+
+    border:1px dashed #d1d5db;
+
+}
+
+.empty-icon{
+
+    width:90px;
+
+    height:90px;
+
+    margin:0 auto 24px;
+
+    border-radius:50%;
+
+    background:#eef2ff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:40px;
+
+}
+
+.conversation-empty h3{
+
+    font-size:28px;
+
+    margin-bottom:12px;
+
+    color:#111827;
+
+}
+
+.conversation-empty p{
+
+    max-width:500px;
+
+    margin:auto;
+
+    color:#6b7280;
+
+    line-height:1.7;
+
+}
+
+.friend-header,
+.conversation-bubble,
+.conversation-empty{
+
+    animation:fadeUp .4s ease;
+
+}

@@ -1,0 +1,228 @@
+.guild-navbar{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+    background:rgba(255,255,255,.92);
+
+    backdrop-filter:blur(14px);
+
+    border-bottom:1px solid #e5e7eb;
+
+}
+
+.guild-navbar-container{
+
+    max-width:1280px;
+
+    margin:auto;
+
+    height:78px;
+
+    padding:0 28px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+}
+
+.guild-logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    font-size:26px;
+
+    font-weight:700;
+
+    color:#111827;
+
+    text-decoration: none;
+
+}
+
+.guild-logo:hover{
+
+    color:#111827;
+    
+
+}
+
+.guild-logo-icon{
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:12px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        #7c3aed
+    );
+
+    color:white;
+
+    font-weight:700;
+
+    box-shadow:0 10px 24px rgba(79,70,229,.25);
+
+}
+
+.guild-nav-links{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:30px;
+
+}
+
+.guild-nav-links a{
+
+    color:#6b7280;
+
+    font-weight:600;
+
+    position:relative;
+
+    transition:.25s;
+
+    text-decoration: none;
+
+}
+
+.guild-nav-links a:hover{
+
+    color:var(--primary);
+
+}
+
+.guild-nav-links a.active{
+
+    color:var(--primary);
+
+}
+
+.guild-nav-links a.active::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-10px;
+
+    width:100%;
+
+    height:3px;
+
+    border-radius:20px;
+
+    background:var(--primary);
+
+}
+
+.guild-nav-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+}
+
+.nav-outline-btn,
+
+.nav-primary-btn{
+
+    padding:10px 20px;
+
+    border-radius:12px;
+
+    font-weight:600;
+
+    transition:.25s;
+    
+    text-decoration: none;
+
+}
+
+.nav-outline-btn{
+
+    border:1px solid #d1d5db;
+
+    background:white;
+
+    color:#374151;
+
+}
+
+.nav-outline-btn:hover{
+
+    background:#eef2ff;
+
+    border-color:#c7d2fe;
+
+    color:var(--primary);
+
+    transform:translateY(-2px);
+
+}
+
+.nav-primary-btn{
+
+    border:none;
+
+    background:var(--primary);
+
+    color:white;
+
+    cursor:pointer;
+
+    box-shadow:0 10px 22px rgba(79,70,229,.18);
+
+}
+
+.nav-primary-btn:hover{
+
+    background:var(--primary-dark);
+
+    color:white;
+
+    transform:translateY(-2px);
+
+}
+
+.logout-btn{
+
+    background:#ef4444;
+
+    box-shadow:0 10px 22px rgba(239,68,68,.18);
+
+}
+
+.logout-btn:hover{
+
+    background:#dc2626;
+
+}

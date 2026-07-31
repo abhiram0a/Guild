@@ -1,0 +1,735 @@
+.received-page{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:40px 20px 70px;
+
+}
+
+html {
+    scrollbar-gutter: stable;
+}
+
+
+/* ===========================
+   Header
+=========================== */
+
+
+.received-header{
+
+    margin-bottom:30px;
+
+}
+
+
+.received-header h1{
+
+    font-size:38px;
+
+    font-weight:700;
+
+    color:var(--text);
+
+    margin-bottom:10px;
+
+}
+
+
+.received-header p{
+
+    color:var(--text-light);
+
+    max-width:720px;
+
+    line-height:1.8;
+
+}
+
+
+
+/* ===========================
+   Summary
+=========================== */
+
+
+.received-summary{
+
+    display:flex;
+
+    gap:18px;
+
+    margin-bottom:45px;
+
+}
+
+
+.received-summary>div{
+
+    flex:1;
+
+    background:white;
+
+    border:1px solid var(--border);
+
+    border-radius:16px;
+
+    padding:18px 22px;
+
+    transition:.25s;
+
+}
+
+
+.received-summary>div:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:var(--shadow);
+
+}
+
+
+.received-summary span{
+
+    display:block;
+
+    color:#6b7280;
+
+    font-size:13px;
+
+    text-transform:uppercase;
+
+    letter-spacing:.6px;
+
+}
+
+
+.received-summary strong{
+
+    display:block;
+
+    margin-top:8px;
+
+    font-size:32px;
+
+    color:var(--primary);
+
+}
+
+
+
+/* ===========================
+   Timeline
+=========================== */
+
+
+.proposal-timeline{
+
+    position:relative;
+
+    padding-left:42px;
+
+}
+
+
+.proposal-timeline::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:14px;
+
+    top:0;
+
+    bottom:0;
+
+    width:3px;
+
+    background:#e5e7eb;
+
+    border-radius:20px;
+
+}
+
+
+
+/* ===========================
+   Item
+=========================== */
+
+
+.proposal-item{
+
+    position:relative;
+
+    margin-bottom:30px;
+
+    animation:fadeUp .45s ease;
+
+}
+
+
+.proposal-dot{
+
+    position:absolute;
+
+    left:-36px;
+
+    top:22px;
+
+    width:16px;
+
+    height:16px;
+
+    border-radius:50%;
+
+    border:4px solid white;
+
+}
+
+
+.proposal-dot.pending{
+
+    background:#f59e0b;
+
+}
+
+
+.proposal-dot.accepted{
+
+    background:#22c55e;
+
+}
+
+
+.proposal-dot.rejected{
+
+    background:#ef4444;
+
+}
+
+
+.proposal-dot.countered{
+
+    background:#6366f1;
+
+}
+
+
+
+/* ===========================
+   Card
+=========================== */
+
+
+.proposal-card{
+
+    background:white;
+
+    border:1px solid var(--border);
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow-sm);
+
+    transition:.25s;
+
+}
+
+
+.proposal-card:hover{
+
+    box-shadow:var(--shadow);
+
+}
+
+
+
+/* ===========================
+   Main Row
+=========================== */
+
+
+.proposal-row{
+
+    display:grid;
+
+    grid-template-columns:
+
+    2.5fr
+
+    130px
+
+    140px
+
+    130px
+
+    60px;
+
+    align-items:center;
+
+    gap:18px;
+
+    padding:22px 28px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+
+.proposal-row:hover{
+
+    background:#f8fbff;
+
+}
+
+
+
+.proposal-main h3{
+
+    margin:0 0 6px;
+
+    font-size:20px;
+
+    font-weight:700;
+
+    color:var(--text);
+
+}
+
+
+.proposal-main p{
+
+    margin:0;
+
+    color:#6b7280;
+
+}
+
+
+
+.proposal-price{
+
+    font-size:20px;
+
+    font-weight:700;
+
+    color:var(--primary);
+
+}
+
+
+
+.proposal-date{
+
+    color:#6b7280;
+
+    font-size:14px;
+
+}
+
+
+
+/* ===========================
+   Status
+=========================== */
+
+
+.proposal-status{
+
+    justify-self:center;
+
+    padding:7px 15px;
+
+    border-radius:30px;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    letter-spacing:.5px;
+
+}
+
+
+.proposal-status.pending{
+
+    background:#fff7ed;
+
+    color:#c2410c;
+
+}
+
+
+.proposal-status.accepted{
+
+    background:#ecfdf5;
+
+    color:#15803d;
+
+}
+
+
+.proposal-status.rejected{
+
+    background:#fef2f2;
+
+    color:#b91c1c;
+
+}
+
+
+.proposal-status.countered{
+
+    background:#eef2ff;
+
+    color:#4338ca;
+
+}
+
+
+
+.proposal-expand{
+
+    width:34px;
+
+    height:34px;
+
+    border-radius:50%;
+
+    background:#eef2ff;
+
+    color:var(--primary);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:22px;
+
+    font-weight:700;
+
+}
+
+
+
+/* ===========================
+   Details
+=========================== */
+
+
+.proposal-details{
+
+    border-top:1px solid #eef2f7;
+
+    padding:28px;
+
+    background:#fcfcfd;
+
+    animation:fadeUp .3s ease;
+
+}
+
+
+
+.detail-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:22px;
+
+    margin-bottom:28px;
+
+}
+
+
+
+.detail-grid span{
+
+    display:block;
+
+    color:#6b7280;
+
+    font-size:12px;
+
+    text-transform:uppercase;
+
+    letter-spacing:.6px;
+
+    margin-bottom:7px;
+
+}
+
+
+
+.detail-grid strong{
+
+    color:#111827;
+
+    font-size:17px;
+
+}
+
+
+
+/* ===========================
+   Messages
+=========================== */
+
+
+.proposal-message-box,
+
+.counter-box{
+
+    background:white;
+
+    border-radius:12px;
+
+    padding:22px;
+
+    margin-bottom:22px;
+
+}
+
+
+
+.proposal-message-box{
+
+    border-left:5px solid var(--primary);
+
+}
+
+
+
+.counter-box{
+
+    border-left:5px solid #6366f1;
+
+}
+
+
+
+.proposal-message-box h4,
+
+.counter-box h4{
+
+    margin-bottom:12px;
+
+    font-size:17px;
+
+    font-weight:700;
+
+}
+
+
+
+.proposal-message-box h4{
+
+    color:var(--primary);
+
+}
+
+
+.counter-box h4{
+
+    color:#4338ca;
+
+}
+
+
+
+.proposal-message-box p,
+
+.counter-box p{
+
+    margin:0;
+
+    color:#4b5563;
+
+    line-height:1.8;
+
+}
+
+
+
+/* ===========================
+   Actions
+=========================== */
+
+
+.proposal-actions{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    gap:12px;
+
+}
+
+
+
+.proposal-actions button{
+
+    border:none;
+
+    padding:12px 24px;
+
+    border-radius:12px;
+
+    font-weight:600;
+
+    transition:.25s;
+
+}
+
+
+
+.accept-btn{
+
+    background:#22c55e;
+
+    color:white;
+
+}
+
+
+.accept-btn:hover{
+
+    background:#16a34a;
+
+    transform:translateY(-2px);
+
+}
+
+
+
+.reject-btn{
+
+    background:#ef4444;
+
+    color:white;
+
+}
+
+
+.reject-btn:hover{
+
+    background:#dc2626;
+
+    transform:translateY(-2px);
+
+}
+
+
+
+.counter-btn{
+
+    background:#f59e0b;
+
+    color:white;
+
+}
+
+
+.counter-btn:hover{
+
+    background:#d97706;
+
+    transform:translateY(-2px);
+
+}
+
+
+
+/* ===========================
+   Empty
+=========================== */
+
+
+.received-empty{
+
+    text-align:center;
+
+    background:white;
+
+    border:2px dashed #d1d5db;
+
+    border-radius:20px;
+
+    padding:80px 30px;
+
+}
+
+
+
+.empty-icon{
+
+    font-size:64px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.received-empty h2{
+
+    font-size:30px;
+
+    margin-bottom:12px;
+
+}
+
+
+
+.received-empty p{
+
+    color:#6b7280;
+
+}
+
+
+
+/* ===========================
+   Bootstrap Modal Enhancement
+=========================== */
+
+
+.modal-content{
+
+    border:none;
+
+    border-radius:18px;
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+
+.modal-title{
+
+    font-weight:700;
+
+}
+
+
+.modal-footer .btn{
+
+    border-radius:10px;
+
+    padding:10px 22px;
+
+}

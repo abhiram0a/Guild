@@ -1,0 +1,39 @@
+.guild-page{
+
+    padding:40px 0 70px;
+
+}
+
+.page-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:32px;
+
+}
+
+.page-title{
+
+    font-size:2rem;
+
+    font-weight:700;
+
+    margin:0;
+
+    color:var(--text);
+
+}
+
+.page-subtitle{
+
+    margin-top:8px;
+
+    color:var(--text-light);
+
+    max-width:700px;
+
+}

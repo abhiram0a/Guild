@@ -1,0 +1,612 @@
+.apply-project-page{
+
+    min-height:calc(100vh - 70px);
+
+    padding:45px 20px 80px;
+
+    background:#f7f8fc;
+
+}
+
+
+.apply-wrapper{
+
+    max-width:900px;
+
+    margin:auto;
+
+}
+
+
+/* Header */
+
+.apply-header{
+
+    margin-bottom:35px;
+
+}
+
+
+.apply-tag{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    padding:6px 14px;
+
+    border-radius:20px;
+
+    background:#eef2ff;
+
+    color:var(--primary);
+
+    font-size:13px;
+
+    font-weight:700;
+
+    margin-bottom:14px;
+
+    text-transform:uppercase;
+
+    letter-spacing:.5px;
+
+}
+
+
+.apply-header h1{
+
+    font-size:38px;
+
+    font-weight:750;
+
+    margin-bottom:10px;
+
+    color:#111827;
+
+}
+
+
+.apply-header p{
+
+    color:#6b7280;
+
+    font-size:16px;
+
+    max-width:650px;
+
+}
+
+
+
+/* Mode switch */
+
+
+.application-mode-switch{
+
+    display:flex;
+
+    background:white;
+
+    padding:6px;
+
+    border-radius:14px;
+
+    width:max-content;
+
+    margin-bottom:28px;
+
+    box-shadow:var(--shadow-sm);
+
+    border:1px solid var(--border);
+
+}
+
+
+.mode-btn{
+
+    border:none;
+
+    background:transparent;
+
+    padding:12px 25px;
+
+    border-radius:10px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    font-weight:600;
+
+    color:#6b7280;
+
+    transition:.25s;
+
+}
+
+
+.mode-btn.active{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+
+.mode-btn:hover{
+
+    color:var(--primary);
+
+}
+
+
+.mode-btn.active:hover{
+
+    color:white;
+
+}
+
+
+
+/* Error */
+
+
+.apply-error{
+
+    background:#fee2e2;
+
+    color:#b91c1c;
+
+    padding:14px 18px;
+
+    border-radius:12px;
+
+    margin-bottom:25px;
+
+    font-weight:600;
+
+}
+
+
+
+/* Team Preview */
+
+
+.team-preview-card{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:28px;
+
+    margin-bottom:28px;
+
+    border:1px solid var(--border);
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+
+.section-heading{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:22px;
+
+}
+
+
+.section-heading h3{
+
+    margin:0;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-size:21px;
+
+    font-weight:700;
+
+}
+
+
+.section-heading span{
+
+    background:#ecfdf5;
+
+    color:#16a34a;
+
+    padding:6px 14px;
+
+    border-radius:20px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+}
+
+
+
+.team-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+}
+
+
+
+.team-member-card{
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:18px;
+
+    border-radius:16px;
+
+    background:#f8fafc;
+
+    border:1px solid #e5e7eb;
+
+}
+
+
+.member-avatar{
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:white;
+
+    font-size:20px;
+
+    font-weight:700;
+
+}
+
+
+.member-content{
+
+    flex:1;
+
+}
+
+
+.member-content h4{
+
+    margin:0;
+
+    font-size:17px;
+
+    font-weight:700;
+
+}
+
+
+.member-content p{
+
+    margin:3px 0 10px;
+
+    color:#6b7280;
+
+    font-size:14px;
+
+}
+
+
+.member-meta{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:6px;
+
+    font-size:13px;
+
+    color:#374151;
+
+}
+
+
+.member-meta span{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:7px;
+
+}
+
+
+.accepted-icon{
+
+    color:#22c55e;
+
+    position:absolute;
+
+    right:15px;
+
+    top:15px;
+
+}
+
+
+
+.team-empty{
+
+    padding:25px;
+
+    text-align:center;
+
+    color:#6b7280;
+
+    background:#f9fafb;
+
+    border-radius:14px;
+
+}
+
+
+
+/* Application Form */
+
+
+.apply-form-card{
+
+    background:white;
+
+    border-radius:22px;
+
+    padding:35px;
+
+    border:1px solid var(--border);
+
+    box-shadow:var(--shadow);
+
+}
+
+
+.apply-form-header{
+
+    margin-bottom:30px;
+
+}
+
+
+.apply-form-header h3{
+
+    font-size:24px;
+
+    margin-bottom:6px;
+
+    font-weight:700;
+
+}
+
+
+.apply-form-header p{
+
+    color:#6b7280;
+
+    margin:0;
+
+}
+
+
+
+.apply-form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:22px;
+
+}
+
+
+
+.form-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:9px;
+
+}
+
+
+.form-group label{
+
+    font-weight:650;
+
+    color:#374151;
+
+    font-size:15px;
+
+}
+
+
+.form-control,
+
+.form-select{
+
+    padding:14px 16px!important;
+
+    border-radius:12px!important;
+
+    border:1px solid #d1d5db!important;
+
+    background:#fff;
+
+}
+
+
+.form-control:focus,
+
+.form-select:focus{
+
+    border-color:var(--primary)!important;
+
+    box-shadow:
+    0 0 0 4px rgba(79,70,229,.12)!important;
+
+}
+
+
+textarea.form-control{
+
+    line-height:1.6;
+
+}
+
+
+
+.apply-submit{
+
+    margin-top:10px;
+
+}
+
+
+.apply-submit button{
+    font-family:inherit;
+}
+
+
+.apply-submit button:hover{
+
+    transform:translateY(-2px);
+
+}
+
+
+
+/* Responsive mainly for keeping layout safe */
+
+
+@media(max-width:900px){
+
+    .team-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+
+
+.apply-submit-btn{
+
+    width:100%;
+
+    border:none;
+
+    padding:15px 24px;
+
+    border-radius:14px;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    box-shadow:
+    0 10px 25px rgba(79,70,229,.25);
+
+}
+
+
+.apply-submit-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 15px 35px rgba(79,70,229,.35);
+
+}
+
+
+.apply-submit-btn:active{
+
+    transform:translateY(0);
+
+}
+
+
+
+.apply-submit-btn.team-submit{
+
+    background:linear-gradient(
+        135deg,
+        #16a34a,
+        #22c55e
+    );
+
+    box-shadow:
+    0 10px 25px rgba(34,197,94,.25);
+
+}
+
+
+.apply-submit-btn.team-submit:hover{
+
+    box-shadow:
+    0 15px 35px rgba(34,197,94,.35);
+
+}
+
+

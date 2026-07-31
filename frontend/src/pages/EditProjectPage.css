@@ -1,0 +1,362 @@
+.edit-project-page {
+
+    max-width:1000px;
+
+    margin:auto;
+
+    padding:50px 50px 80px;
+
+}
+
+
+
+.edit-project-container {
+
+    width:100%;
+    margin:auto;
+    
+
+}
+
+
+
+/* Header */
+
+.edit-project-header {
+
+    margin-bottom:33px;
+
+}
+
+
+.edit-project-header h1 {
+
+    font-size:36px;
+
+    font-weight:750;
+
+    color:var(--text);
+
+    margin-bottom:8px;
+
+}
+
+
+.edit-project-header p {
+
+    color:var(--text-light);
+
+    margin:0;
+
+}
+
+
+
+/* Error */
+
+.edit-project-error {
+
+    background:#fef2f2;
+
+    border:1px solid #fecaca;
+
+    color:#b91c1c;
+
+    padding:14px 18px;
+
+    border-radius:12px;
+
+    margin-bottom:25px;
+
+}
+
+
+
+/* Main form */
+
+.edit-project-form {
+
+    background:white;
+
+    border-radius:22px;
+
+    padding:38px;
+
+    border:1px solid #eef2f7;
+
+    animation:editProjectFade .4s ease;
+
+    box-shadow:var(--shadow);
+
+}
+
+
+
+/* Locked structure information box */
+
+.edit-project-info {
+
+    display:flex;
+
+    gap:16px;
+
+    align-items:flex-start;
+
+    background:#f8fafc;
+
+    border:1px solid #e5e7eb;
+
+    border-radius:14px;
+
+    padding:18px 20px;
+
+    margin-bottom:32px;
+
+}
+
+
+.info-icon {
+
+    width:32px;
+
+    height:32px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#eef2ff;
+
+    color:var(--primary);
+
+    border-radius:50%;
+
+    font-weight:700;
+
+}
+
+
+.edit-project-info h4 {
+
+    margin:0 0 6px;
+
+    font-size:17px;
+
+    color:#111827;
+
+}
+
+
+.edit-project-info p {
+
+    margin:0;
+
+    color:#6b7280;
+
+    line-height:1.6;
+
+    font-size:14px;
+
+}
+
+
+
+/* Form fields */
+
+.project-form-section {
+
+    padding-bottom:30px;
+
+    margin-bottom:30px;
+
+
+}
+
+
+.project-form-section label {
+
+
+    display:block;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    color:#374151;
+
+    margin-bottom:8px;
+
+}
+
+
+
+.project-input {
+
+    width:100%;
+
+    padding:13px 15px;
+
+    border:1px solid var(--border); 
+
+    width:100%;
+
+    border-radius:12px;
+
+    outline:none;
+
+    font-size:15px;
+
+    color:#111827;
+
+    transition:.25s;
+
+    background:white;
+
+}
+
+
+
+.project-input:focus {
+
+    outline:none;
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 0 4px rgba(79,70,229,.12);
+
+}
+
+
+
+.project-textarea {
+
+    resize:vertical;
+
+}
+
+
+
+/* Buttons */
+
+.edit-project-actions {
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    gap:14px;
+
+    margin-top:35px;
+
+}
+
+
+
+.project-cancel-btn {
+
+    padding:13px 26px;
+
+    border-radius:12px;
+
+    border:1px solid #e5e7eb;
+
+    background:#f8fafc;
+
+    color:#374151;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+
+
+.project-cancel-btn:hover {
+
+    background:#eef2ff;
+
+    color:var(--primary);
+
+}
+
+
+
+.project-save-btn {
+
+    padding:13px 30px;
+
+    border-radius:12px;
+
+    border:none;
+
+    background:var(--primary);
+
+    color:white;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+
+
+.project-save-btn:hover {
+
+    background:var(--primary-dark);
+
+    transform:translateY(-2px);
+
+}
+
+
+
+/* Loading */
+
+.edit-project-loading {
+
+    min-height:70vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:18px;
+
+    color:#6b7280;
+
+}
+
+
+
+/* Animation */
+
+@keyframes editProjectFade {
+
+    from {
+
+        opacity:0;
+
+        transform:translateY(15px);
+
+    }
+
+
+    to {
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}

@@ -1,0 +1,567 @@
+.applications-page{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:40px 20px 70px;
+
+}
+
+
+html {
+    scrollbar-gutter: stable;
+}
+
+/* ===========================
+   Header
+=========================== */
+
+.applications-header{
+
+    margin-bottom:30px;
+
+}
+
+.applications-header h1{
+
+    font-size:38px;
+
+    font-weight:700;
+
+    color:var(--text);
+
+    margin-bottom:10px;
+
+}
+
+.applications-header p{
+
+    color:var(--text-light);
+
+    max-width:700px;
+
+    line-height:1.8;
+
+}
+
+/* ===========================
+   Summary
+=========================== */
+
+.applications-summary{
+
+    display:flex;
+
+    gap:18px;
+
+    margin-bottom:45px;
+
+}
+
+.applications-summary>div{
+
+    flex:1;
+
+    background:white;
+
+    border:1px solid var(--border);
+
+    border-radius:16px;
+
+    padding:18px 22px;
+
+    transition:.25s;
+
+}
+
+.applications-summary>div:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:var(--shadow);
+
+}
+
+.applications-summary span{
+
+    display:block;
+
+    color:#6b7280;
+
+    font-size:13px;
+
+    text-transform:uppercase;
+
+    letter-spacing:.6px;
+
+}
+
+.applications-summary strong{
+
+    display:block;
+
+    margin-top:8px;
+
+    font-size:32px;
+
+    color:var(--primary);
+
+}
+
+/* ===========================
+   Timeline
+=========================== */
+
+.application-timeline{
+
+    position:relative;
+
+    padding-left:42px;
+
+}
+
+.application-timeline::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:14px;
+
+    top:0;
+
+    bottom:0;
+
+    width:3px;
+
+    background:#e5e7eb;
+
+    border-radius:20px;
+
+}
+
+/* ===========================
+   Timeline Item
+=========================== */
+
+.timeline-item{
+
+    position:relative;
+
+    margin-bottom:30px;
+
+}
+
+.timeline-dot{
+
+    position:absolute;
+
+    left:-36px;
+
+    top:22px;
+
+    width:16px;
+
+    height:16px;
+
+    border-radius:50%;
+
+    border:4px solid white;
+
+    box-shadow:0 0 0 3px white;
+
+}
+
+.timeline-dot.pending{
+
+    background:#f59e0b;
+
+}
+
+.timeline-dot.accepted{
+
+    background:#22c55e;
+
+}
+
+.timeline-dot.rejected{
+
+    background:#ef4444;
+
+}
+
+/* ===========================
+   Card
+=========================== */
+
+.timeline-card{
+
+    background:white;
+
+    border:1px solid var(--border);
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow-sm);
+
+    transition:.25s;
+
+}
+
+.timeline-card:hover{
+
+    box-shadow:var(--shadow);
+
+}
+
+/* ===========================
+   Row
+=========================== */
+
+.timeline-row{
+
+    display:grid;
+
+    grid-template-columns:2.5fr 120px 130px 120px 60px;
+
+    align-items:center;
+
+    gap:18px;
+
+    padding:22px 28px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.timeline-row:hover{
+
+    background:#f8fbff;
+
+}
+
+.timeline-main h3{
+
+    font-size:20px;
+
+    margin:0 0 6px;
+
+    font-weight:700;
+
+    color:var(--text);
+
+}
+
+.timeline-main p{
+
+    margin:0;
+
+    color:#6b7280;
+
+}
+
+.timeline-price{
+
+    font-size:20px;
+
+    font-weight:700;
+
+    color:var(--primary);
+
+}
+
+.timeline-date{
+
+    color:#6b7280;
+
+    font-size:14px;
+
+}
+
+.timeline-expand{
+
+    width:34px;
+
+    height:34px;
+
+    border-radius:50%;
+
+    background:#eef2ff;
+
+    color:var(--primary);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:22px;
+
+    font-weight:700;
+
+}
+
+/* ===========================
+   Status
+=========================== */
+
+.timeline-status{
+
+    justify-self:center;
+
+    padding:7px 16px;
+
+    border-radius:30px;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    letter-spacing:.6px;
+
+}
+
+.timeline-status.pending{
+
+    background:#fff7ed;
+
+    color:#c2410c;
+
+}
+
+.timeline-status.accepted{
+
+    background:#ecfdf5;
+
+    color:#15803d;
+
+}
+
+.timeline-status.rejected{
+
+    background:#fef2f2;
+
+    color:#b91c1c;
+
+}
+
+/* ===========================
+   Expanded Section
+=========================== */
+
+.timeline-details{
+
+    border-top:1px solid #eef2f7;
+
+    padding:28px;
+
+    background:#fcfcfd;
+
+    animation:fadeUp .3s ease;
+
+}
+
+.detail-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:22px;
+
+    margin-bottom:28px;
+
+}
+
+.detail-grid span{
+
+    display:block;
+
+    color:#6b7280;
+
+    font-size:12px;
+
+    text-transform:uppercase;
+
+    letter-spacing:.6px;
+
+    margin-bottom:7px;
+
+}
+
+.detail-grid strong{
+
+    color:#111827;
+
+    font-size:17px;
+
+}
+
+/* ===========================
+   Cover Letter
+=========================== */
+
+.cover-letter-box{
+
+    background:white;
+
+    border-left:5px solid var(--primary);
+
+    border-radius:10px;
+
+    padding:22px;
+
+    margin-bottom:28px;
+
+}
+
+.cover-letter-box h4{
+
+    margin-bottom:12px;
+
+    font-size:17px;
+
+    color:var(--primary);
+
+}
+
+.cover-letter-box p{
+
+    margin:0;
+
+    color:#4b5563;
+
+    line-height:1.9;
+
+}
+
+/* ===========================
+   Actions
+=========================== */
+
+.timeline-actions{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+}
+
+
+.view-project-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:12px 22px;
+
+    border-radius:12px;
+
+    background:var(--primary);
+
+    color:white;
+
+    font-weight:600;
+
+    transition:.25s;
+
+}
+
+.view-project-btn:hover{
+
+    background:var(--primary-dark);
+
+    color:white;
+
+    transform:translateY(-2px);
+
+}
+
+/* ===========================
+   Empty
+=========================== */
+
+.applications-empty{
+
+    text-align:center;
+
+    background:white;
+
+    border:2px dashed #d1d5db;
+
+    border-radius:20px;
+
+    padding:80px 30px;
+
+}
+
+.empty-icon{
+
+    font-size:64px;
+
+    margin-bottom:20px;
+
+}
+
+.applications-empty h2{
+
+    margin-bottom:12px;
+
+    font-size:30px;
+
+}
+
+.applications-empty p{
+
+    color:#6b7280;
+
+    margin-bottom:28px;
+
+}
+
+.browse-btn{
+
+    display:inline-block;
+
+    background:var(--primary);
+
+    color:white;
+
+    padding:13px 28px;
+
+    border-radius:12px;
+
+    font-weight:600;
+
+    transition:.25s;
+
+}
+
+.browse-btn:hover{
+
+    background:var(--primary-dark);
+
+    color:white;
+
+    transform:translateY(-2px);
+
+}
+
+/* ===========================
+   Animation
+=========================== */
+
+.timeline-item{
+
+    animation:fadeUp .5s ease;
+
+}

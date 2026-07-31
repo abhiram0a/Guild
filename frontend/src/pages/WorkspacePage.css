@@ -1,0 +1,652 @@
+.workspace-loading{
+    min-height:75vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:20px;
+    color:var(--text-light);
+}
+
+.workspace-page{
+    max-width:1450px;
+    margin:0 auto;
+    padding:32px 24px 50px;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+.workspace-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    margin-bottom:28px;
+    gap:30px;
+}
+
+.workspace-breadcrumb{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:#eef2ff;
+    color:var(--primary);
+    font-size:13px;
+    font-weight:700;
+    padding:7px 14px;
+    border-radius:999px;
+    margin-bottom:14px;
+}
+
+.workspace-header h1{
+    font-size:34px;
+    font-weight:700;
+    color:var(--text);
+    margin-bottom:14px;
+}
+
+.workspace-meta{
+    display:flex;
+    gap:18px;
+    flex-wrap:wrap;
+}
+
+.workspace-meta span{
+    background:white;
+    border:1px solid var(--border);
+    border-radius:12px;
+    padding:10px 15px;
+    font-size:14px;
+    color:var(--text-light);
+}
+
+.workspace-meta strong{
+    display:block;
+    margin-top:3px;
+    color:var(--text);
+    font-size:15px;
+}
+
+.workspace-payment-btn{
+    border:none;
+    background:linear-gradient(135deg,var(--primary),#6366f1);
+    color:white;
+    font-weight:600;
+    border-radius:12px;
+    padding:12px 22px;
+    transition:.25s;
+    box-shadow:var(--shadow-sm);
+}
+
+.workspace-payment-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:var(--shadow);
+}
+
+.workspace-payment-btn.full-width{
+    width:100%;
+    margin-top:18px;
+}
+
+/* ===========================
+   MAIN LAYOUT
+=========================== */
+
+.workspace-layout{
+    display:grid;
+    grid-template-columns:2.2fr 380px;
+    gap:28px;
+    align-items:start;
+}
+
+/* ===========================
+   CHAT AREA
+=========================== */
+
+.workspace-chat{
+    background:white;
+    border-radius:22px;
+    border:1px solid var(--border);
+    box-shadow:var(--shadow-sm);
+    display:flex;
+    flex-direction:column;
+    overflow:hidden;
+    height:82vh;
+}
+
+.chat-header{
+    padding:20px 28px;
+    font-size:20px;
+    font-weight:700;
+    border-bottom:1px solid var(--border);
+    background:#fbfbfd;
+}
+
+.chat-feed{
+    flex:1;
+    overflow-y:auto;
+    padding:28px;
+    background:#f8fafc;
+}
+
+/* Scrollbar */
+
+.chat-feed::-webkit-scrollbar{
+    width:9px;
+}
+
+.chat-feed::-webkit-scrollbar-thumb{
+    background:#d7dce7;
+    border-radius:20px;
+}
+
+.chat-feed::-webkit-scrollbar-track{
+    background:transparent;
+}
+
+/* ===========================
+   MESSAGE ROW
+=========================== */
+
+.chat-row{
+    display:flex;
+    align-items:flex-end;
+    margin-bottom:22px;
+    gap:12px;
+}
+
+.chat-row.mine{
+    justify-content:flex-end;
+}
+
+.chat-avatar{
+    width:46px;
+    height:46px;
+    border-radius:50%;
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        #7c3aed
+    );
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:700;
+    flex-shrink:0;
+}
+
+.chat-content{
+    max-width:72%;
+}
+
+.chat-row.mine .chat-content{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-end;
+}
+
+.chat-info{
+    display:flex;
+    gap:10px;
+    align-items:center;
+    margin-bottom:6px;
+}
+
+.chat-author{
+    font-size:14px;
+    font-weight:700;
+    color:#374151;
+}
+
+.chat-time{
+    font-size:12px;
+    color:#9ca3af;
+}
+
+/* ===========================
+   CHAT BUBBLES
+=========================== */
+
+.chat-bubble{
+    background:white;
+    border-radius:18px;
+    border:1px solid #e5e7eb;
+    padding:16px 18px;
+    box-shadow:0 3px 10px rgba(0,0,0,.04);
+    transition:.25s;
+}
+
+.chat-bubble:hover{
+    box-shadow:0 10px 24px rgba(0,0,0,.08);
+}
+
+.chat-row.mine .chat-bubble{
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        #6366f1
+    );
+    color:white;
+    border:none;
+}
+
+.chat-bubble p{
+    margin:0;
+    line-height:1.7;
+    white-space:pre-wrap;
+}
+
+.file-bubble{
+    min-width:280px;
+}
+/* ===========================
+   FILE MESSAGE
+=========================== */
+
+.workspace-file{
+    display:flex;
+    align-items:center;
+    gap:16px;
+}
+
+.workspace-file-icon{
+    width:48px;
+    height:48px;
+    border-radius:12px;
+    background:#eef2ff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:22px;
+    flex-shrink:0;
+}
+
+.workspace-file-info{
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+}
+
+.workspace-file-info strong{
+    color:var(--text);
+    font-size:15px;
+}
+
+.workspace-file-info a{
+    color:var(--primary);
+    font-size:14px;
+    font-weight:600;
+    text-decoration:none;
+}
+
+.workspace-file-info a:hover{
+    text-decoration:underline;
+}
+
+/* ===========================
+   EMPTY CHAT
+=========================== */
+
+.workspace-empty{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    height:100%;
+    color:#6b7280;
+}
+
+.workspace-empty h4{
+    font-size:24px;
+    margin-bottom:12px;
+    color:#111827;
+}
+
+.workspace-empty p{
+    max-width:420px;
+    line-height:1.7;
+}
+
+/* ===========================
+   COMPOSER
+=========================== */
+
+.workspace-composer{
+    border-top:1px solid var(--border);
+    background:white;
+    padding:22px;
+}
+
+.workspace-composer textarea{
+    resize:none;
+    border-radius:14px;
+    border:1px solid var(--border);
+    box-shadow:none !important;
+}
+
+.workspace-composer textarea:focus{
+    border-color:var(--primary);
+    box-shadow:0 0 0 .2rem rgba(79,70,229,.15)!important;
+}
+
+.composer-actions{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:18px;
+}
+
+/* ===========================
+   UPLOAD
+=========================== */
+
+.upload-box{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.upload-box input[type=file]{
+    width:230px;
+}
+
+.upload-btn{
+    border:none;
+    background:#eef2ff;
+    color:var(--primary);
+    font-weight:600;
+    border-radius:10px;
+    padding:10px 18px;
+    transition:.25s;
+}
+
+.upload-btn:hover{
+    background:#dbe4ff;
+}
+
+.send-btn{
+    border:none;
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        #6366f1
+    );
+    color:white;
+    border-radius:12px;
+    font-weight:600;
+    padding:12px 24px;
+    transition:.25s;
+}
+
+.send-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:var(--shadow);
+}
+
+/* ===========================
+   SIDEBAR
+=========================== */
+
+.workspace-sidebar{
+    display:flex;
+    flex-direction:column;
+    gap:22px;
+}
+
+.sidebar-card{
+    background:white;
+    border-radius:20px;
+    border:1px solid var(--border);
+    box-shadow:var(--shadow-sm);
+    padding:24px;
+}
+
+.sidebar-card h3{
+    font-size:20px;
+    font-weight:700;
+    margin-bottom:20px;
+    color:#111827;
+}
+
+/* ===========================
+   PARTICIPANTS
+=========================== */
+
+.participants-list{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+}
+
+.participant-item{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    padding:12px;
+    border-radius:14px;
+    transition:.25s;
+}
+
+.participant-item:hover{
+    background:#f8fafc;
+}
+
+.participant-avatar{
+    width:46px;
+    height:46px;
+    border-radius:50%;
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        #7c3aed
+    );
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:700;
+    flex-shrink:0;
+}
+
+.participant-name{
+    font-weight:700;
+    color:#111827;
+}
+
+.participant-item small{
+    color:#6b7280;
+}
+
+/* ===========================
+   PAYMENT
+=========================== */
+
+.payment-amount{
+    font-size:34px;
+    font-weight:700;
+    color:var(--primary);
+    margin-bottom:14px;
+}
+
+.payment-status{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:8px 18px;
+    border-radius:999px;
+    font-weight:700;
+    font-size:13px;
+    text-transform:uppercase;
+    letter-spacing:.4px;
+}
+
+.status-unpaid{
+    background:#fff7ed;
+    color:#c2410c;
+}
+
+.status-held{
+    background:#eff6ff;
+    color:#2563eb;
+}
+
+.status-released{
+    background:#ecfdf5;
+    color:#16a34a;
+}
+
+/* ===========================
+   REVIEWS
+=========================== */
+
+.review-person{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:14px 0;
+    border-bottom:1px solid #edf0f4;
+}
+
+.review-person:last-child{
+    border-bottom:none;
+}
+
+.review-person strong{
+    display:block;
+    color:#111827;
+}
+
+.review-person small{
+    color:#6b7280;
+}
+
+.review-btn{
+    border:none;
+    border-radius:10px;
+    background:#fbbf24;
+    color:#111827;
+    font-weight:600;
+    padding:9px 16px;
+    transition:.25s;
+}
+
+.review-btn:hover:not(:disabled){
+    transform:translateY(-2px);
+}
+
+.review-btn:disabled{
+    opacity:.55;
+    cursor:not-allowed;
+}
+
+.no-review{
+    color:#9ca3af;
+    text-align:center;
+    padding:20px 0;
+}
+
+/* ===========================
+   MODAL
+=========================== */
+
+.payment-summary{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:8px;
+}
+
+.payment-summary h3{
+    margin-top:5px;
+    color:var(--primary);
+    font-size:32px;
+    font-weight:700;
+}
+
+.payment-summary small{
+    color:#6b7280;
+}
+
+.review-header{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+.review-avatar{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        #7c3aed
+    );
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:22px;
+    font-weight:700;
+}
+
+.review-header h5{
+    margin:0;
+    font-weight:700;
+}
+
+.review-header small{
+    color:#6b7280;
+}
+
+.review-stars{
+    display:flex;
+    gap:10px;
+    margin-top:10px;
+}
+
+.star-btn{
+    width:52px;
+    height:52px;
+    border-radius:12px;
+    border:2px solid #fbbf24;
+    background:white;
+    color:#fbbf24;
+    font-size:24px;
+    transition:.2s;
+}
+
+.star-btn:hover{
+    transform:translateY(-2px);
+}
+
+.star-btn.active{
+    background:#fbbf24;
+    color:white;
+}
+
+/* ===========================
+   ANIMATIONS
+=========================== */
+
+.workspace-chat,
+.sidebar-card,
+.workspace-header{
+    animation:fadeUp .35s ease;
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(16px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
